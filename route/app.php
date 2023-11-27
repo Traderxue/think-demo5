@@ -24,4 +24,6 @@ Route::group("/user", function () {
     Route::get("/page",".user/page");
 
     Route::get("/get/:id","user/getById");
+
+    Route::post("/transfer","user/transfer");
 });
