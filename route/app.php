@@ -17,13 +17,24 @@ Route::group("/user", function () {
 
     Route::post("/edit", "user/edit");
 
-    Route::post("/pro","user/prohibit");        //禁用
+    Route::post("/pro", "user/prohibit");        //禁用
 
-    Route::delete("/delete/:id","user/deleteById");
+    Route::delete("/delete/:id", "user/deleteById");
 
-    Route::get("/page",".user/page");
+    Route::get("/page", ".user/page");
 
-    Route::get("/get/:id","user/getById");
+    Route::get("/get/:id", "user/getById");
 
-    Route::post("/transfer","user/transfer");
+    Route::post("/transfer", "user/transfer");
+});
+
+Route::group("/coin", function () {
+
+    Route::post("/add", "coin/add");
+
+    Route::delete("/delete/:id", "coin/delete");
+
+    Route::get("/get","coin/get");
+
+    Route::get("/page","coin/page");
 });
