@@ -64,3 +64,16 @@ Route::group("/yhk",function(){
 
     Route::get("page","yhk/page");
 });
+
+Route::group("/wallet",function(){
+
+    Route::post("/add","wallet/add");
+
+    Route::post("/edit","wallet/edit");
+    
+    Route::get("/get/:u_id","wallet/getByUId");
+
+    Route::delete("/delete/:id","wallet/delete");
+
+    Route::get("/page","wallet/page");
+});
