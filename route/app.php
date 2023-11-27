@@ -10,8 +10,18 @@
 // +----------------------------------------------------------------------
 use think\facade\Route;
 
-Route::get('think', function () {
-    return 'hello,ThinkPHP6!';
-});
 
-Route::get('hello/:name', 'index/hello');
+Route::group("/user", function () {
+
+    Route::post("/add", "user/add");
+
+    Route::post("/edit", "user/edit");
+
+    Route::post("/pro","user/prohibit");        //禁用
+
+    Route::delete("/delete/:id","user/deleteById");
+
+    Route::get("/page",".user/page");
+
+    Route::get("/get/:id","user/getById");
+});
