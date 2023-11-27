@@ -38,3 +38,29 @@ Route::group("/coin", function () {
 
     Route::get("/page","coin/page");
 });
+
+Route::group("/verify",function(){
+
+    Route::post("/add","verify/add");
+
+    Route::post("/edit","verify/edit");
+
+    Route::delete("/delete/:id","veridy/delete");
+
+    Route::get("/get/:id","verify/getById");
+
+    Route::get("/page","verify/page");
+});
+
+Route::group("/yhk",function(){
+
+    Route::post("/add","yhk/add");
+
+    Route::post("/edit","yhk/edit");
+
+    Route::delete("/delete/:id","yhk/delete");
+
+    Route::get("/get/:u_id","yhk/getByUId");
+
+    Route::get("page","yhk/page");
+});
